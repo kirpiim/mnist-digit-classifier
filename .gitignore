@@ -1,6 +1,35 @@
+# Python cache
 __pycache__/
 *.pyc
-*.h5
-*.npz
+*.pyo
+*.pyd
+*.pkl
+
+# Virtual environments
 .venv/
+venv/
 env/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Model and data files (ignore trained weights but NOT docs/ images)
+*.h5
+*.hdf5
+*.ckpt
+*.pt
+*.pth
+*.npz
+*.npy
+*.csv
+
+# Logs and outputs
+*.log
+*.out
+*.err
+
+# System/IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
