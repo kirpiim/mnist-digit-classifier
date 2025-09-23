@@ -1,4 +1,8 @@
 import tensorflow as tf
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from models.cnn import create_cnn_model
 import matplotlib.pyplot as plt
 
@@ -45,7 +49,7 @@ def plot_training_curves(history):
     plt.legend()
     plt.title("Loss")
 
-    plt.savefig("training_curves.png")
+    plt.savefig("docs/training_curves.png")
     plt.show()
 
 # Call it
