@@ -1,5 +1,6 @@
 import tensorflow as tf
 from models.cnn import create_cnn_model
+import matplotlib.pyplot as plt
 
 # Load MNIST data
 (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
@@ -20,6 +21,35 @@ history = model.fit(
     batch_size=32,
     validation_data=(x_test, y_test)
 )
+
+# Plot curves
+def plot_training_curves(history):
+    acc = history.history['accuracy']
+    val_acc = history.history['val_accuracy']
+    loss = history.history['loss']
+    val_loss = history.history['val_loss']
+
+    plt.figure(figsize=(12, 5))
+
+    # Accuracy
+    plt.subplot(1, 2, 1)
+    plt.plot(acc, label='Training Accuracy')
+    plt.plot(val_acc, label='Validation Accuracy')
+    plt.legend()
+    plt.title("Accuracy")
+
+    # Loss
+    plt.subplot(1, 2, 2)
+    plt.plot(loss, label='Training Loss')
+    plt.plot(val_loss, label='Validation Loss')
+    plt.legend()
+    plt.title("Loss")
+
+    plt.savefig("training_curves.png")
+    plt.show()
+
+# Call it
+plot_training_curves(history)
 
 # Evaluate
 test_loss, test_acc = model.evaluate(x_test, y_test, verbose=2)
