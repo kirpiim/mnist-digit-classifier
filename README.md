@@ -4,17 +4,21 @@ A Convolutional Neural Network trained on the MNIST dataset (handwritten digits 
 Achieved ~99% test accuracy.
 
 ## Overview
-- Dataset: MNIST (60k train / 10k test)
-- Framework: TensorFlow / Keras
-- Model: Simple CNN (Conv2D, ReLU, MaxPool, Dense)
-- Output: `mnist_cnn.h5` (saved model) and `training_curves.png`
+- **Dataset:** MNIST (60,000 train / 10,000 test images)
+- **Framework:** TensorFlow / Keras
+- **Model:** Convolutional Neural Network (Conv2D → ReLU → MaxPool → Dense)
+- **Outputs:**
+  - `mnist_cnn.h5` → trained model (ignored in repo, must be trained locally)
+  - `docs/training_curves.png` → accuracy & loss visualization
 
 ## Training Curves
 Below are the training and validation accuracy & loss curves produced during training:
 
-![Training Curves](training_curves.png)
+![Training Curves](docs/training_curves.png)
 
-## Usage
-Train:
-```bash
-python train.py
+## Setup & Usage
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/kirpiim/mnist-cnn-pytorch.git
+   cd mnist-cnn-pytorch
