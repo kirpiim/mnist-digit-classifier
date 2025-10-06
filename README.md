@@ -1,7 +1,6 @@
-# MNIST Handwritten Digit Recognizer (CNN)
+# MNIST Digit Classifier (CNN)
 
-A Convolutional Neural Network trained on the MNIST dataset (handwritten digits 0–9).  
-Achieved ~99% test accuracy.
+**MNIST Digit Classifier (CNN)** — A TensorFlow/Keras deep learning project showcasing image classification, model optimization, and deployment to TensorFlow Lite and ONNX.
 
 ## Overview
 - **Dataset:** MNIST (60,000 train / 10,000 test images)
@@ -51,11 +50,11 @@ python predict.py path/to/image.png
 ```
 ### 6. Export the model
 
-# Export to TensorFlow Lite
+### Export to TensorFlow Lite
 ```bash
 python export_tflite.py
 ```
-# Export to ONNX
+### Export to ONNX
 ```bash
 python export_onnx.py
 ```
@@ -74,7 +73,7 @@ Command used:
 python mnist_test.py
 ```
 
-# Predicted: 8
+**Model Output:** Predicted → **8**
 
 ## Project Structure
 
@@ -95,8 +94,8 @@ python mnist_test.py
 ```
 
 ## Extra Features
-CLI Predictor: Classify digits from PNG/JPG
-Deployment Ready: Export to ONNX / TensorFlow Lite for mobile & edge devices
+- **CLI Predictor:** Classify digits from PNG/JPG  
+- **Deployment Ready:** Export to ONNX / TensorFlow Lite for mobile & edge devices
 
 ## What I Learned
 - Building and training **Convolutional Neural Networks** for image recognition  
