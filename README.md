@@ -11,6 +11,14 @@ Achieved ~99% test accuracy.
   - `mnist_cnn.h5` → trained model (ignored in repo, must be trained locally)
   - `docs/training_curves.png` → accuracy & loss visualization
 
+## Technologies Used
+- **Programming Language:** Python 3  
+- **Framework:** TensorFlow / Keras  
+- **Libraries:** NumPy, Matplotlib, Pillow  
+- **Model Type:** Convolutional Neural Network (CNN)  
+- **Deployment Formats:** TensorFlow Lite, ONNX  
+- **Environment:** Jupyter / VS Code / CLI
+
 ## Training Curves
 Below are the training and validation accuracy & loss curves produced during training:
 
@@ -57,9 +65,16 @@ python export_onnx.py
 - Training/validation curves saved in `docs/training_curves.png`
 
 **Example prediction:**
+Below is a sample image prediction made by the trained CNN:
 
-python predict.py samples/7.png
-# Predicted: 7
+![Sample Prediction](docs/sample_prediction.png)
+
+Command used:
+```bash
+python mnist_test.py
+```
+
+# Predicted: 8
 
 ## Project Structure
 
@@ -82,3 +97,11 @@ python predict.py samples/7.png
 ## Extra Features
 CLI Predictor: Classify digits from PNG/JPG
 Deployment Ready: Export to ONNX / TensorFlow Lite for mobile & edge devices
+
+## What I Learned
+- Building and training **Convolutional Neural Networks** for image recognition  
+- Using **TensorFlow/Keras** for model construction, training, and evaluation  
+- Handling **data preprocessing and normalization** for grayscale image datasets  
+- Plotting and analyzing **training/validation accuracy curves**  
+- Exporting trained models to **TensorFlow Lite** and **ONNX** for deployment  
+- Structuring a clean, **modular ML project** with reusable components  
